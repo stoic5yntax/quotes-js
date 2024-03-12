@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --darker: #e6ddc6;
+  --lighter: #fef7dc;
+  --accent: #c2b8a3;
+  --text: #7a7363;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: var(--lighter);
+  height: 100vh;
+  padding: 1rem;
+  position: relative;
+  width: 100vw;
+}
+
+button {
+  background: var(--text);
+  border: none;
+  color: var(--lighter);
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+}
+button:hover {
+  transition: all ease-in 0.15s;
+}
+
+/* UTITLITY CLASSES */
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+
+.opacity-low {
+  opacity: 0.75;
+}
+
+/* APP */
+.desktop-view {
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.wrapper {
+  background-color: var(--darker);
+  flex-direction: column;
+  min-height: 65vh;
+  padding: 2rem;
+}
+
+.quote-box {
+  color: var(--text);
+  flex-direction: column;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+}
+.quote-box p {
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+.quote-box small {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 699px) {
+  body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .wrapper {
+    min-height: 45vh;
+    min-width: 120px;
+    width: 100%;
+  }
+  .quote-box p {
+    font-size: 4.5vw;
+  }
+  .quote-box small {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  .wrapper {
+    width: 45%;
+    min-width: 400px;
+  }
+  .quote-box p {
+    font-size: 1.45vw;
+  }
+  .quote-box small {
+    font-size: 1.15vw;
+  }
+}
